@@ -306,3 +306,66 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+
+// Gallery Page JS Start
+
+const pattern = [
+  [1, 1, 2, 2],
+  [2, 1, 3, 2],
+  [1, 2, 3, 4],
+  [3, 1, 4, 2],
+  [3, 2, 4, 3],
+  [3, 3, 4, 4],
+  [4, 1, 5, 2],
+  [4, 2, 5, 3],
+  [4, 3, 5, 4],
+  [5, 1, 7, 3],
+  [5, 3, 6, 4],
+  [6, 3, 7, 4],
+];
+
+const BLOCK_HEIGHT = 6;
+const DESKTOP_BREAKPOINT = 1200;
+
+function applyGalleryGrid(grid) {
+  const items = grid.querySelectorAll(".gallery-images");
+
+  if (window.innerWidth < DESKTOP_BREAKPOINT) {
+    items.forEach(item => (item.style.gridArea = "auto"));
+    return;
+  }
+
+  items.forEach((item, i) => {
+    const blockIndex = Math.floor(i / pattern.length);
+    const patternIndex = i % pattern.length;
+
+    const [r1, c1, r2, c2] = pattern[patternIndex];
+    const offset = blockIndex * BLOCK_HEIGHT;
+
+    item.style.gridArea = `${r1 + offset} / ${c1} / ${r2 + offset} / ${c2}`;
+  });
+}
+function applyActiveTabGrid() {
+  const activeTab = document.querySelector(".tab-pane.active.show");
+  if (!activeTab) return;
+
+  const grid = activeTab.querySelector(".gallery-grid");
+  if (!grid) return;
+
+  applyGalleryGrid(grid);
+}
+document.querySelectorAll('[data-bs-toggle="tab"]').forEach(tab => {
+  tab.addEventListener("shown.bs.tab", () => {
+    setTimeout(applyActiveTabGrid, 50); // small delay = safe
+  });
+});
+
+// initial load
+applyActiveTabGrid();
+
+// resize
+window.addEventListener("resize", applyActiveTabGrid);
+
+// Gallery Page JS End
+

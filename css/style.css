@@ -243,7 +243,7 @@ a {
 .menu-item .submenu.open {
   display: block !important;
 }
-.top-navbar ul li.menu-item{
+.top-navbar ul li.menu-item {
   display: none;
 }
 /* Mega Menu */
@@ -1492,9 +1492,24 @@ footer hr {
 /* Gallery Page Details */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-  grid-auto-rows: 333px; /* base height for all small blocks */
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr; /* 👈 important */
   gap: 24px;
+}
+.gallery-images {
+  background-color: var(--medium-grey);
+  padding: 20px;
+  padding-bottom: 50px;
+}
+.gallery-images h3{
+  color: var(--grey);
+text-align: center;
+font-family: var(--lato);
+font-size: var(--fs-24);
+font-style: normal;
+font-weight: 600;
+margin-top: 10px;
+line-height: 120%;
 }
 .gallery-page .nav-tabs {
   width: 100%;

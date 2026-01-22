@@ -472,6 +472,13 @@
   .modern-facility-slider {
     max-height: 362px;
   }
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-images {
+    grid-area: auto !important; /* 👈 kill JS grid-area */
+  }
 }
 @media only screen and (max-width: 1023px) {
   .help-tabbing-content {
@@ -918,6 +925,19 @@
     border: none;
     padding-bottom: 0;
   }
+  .top-navbar .submenu li:first-child {
+    padding-top: 0;
+  }
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-images {
+    grid-area: auto !important;
+  }
+  .top-navbar ul li .submenu li {
+    display: block;
+  }
 }
 @media only screen and (max-width: 575px) {
   .newsletter-link .input-field {
@@ -1166,6 +1186,13 @@
   }
   .facility-main {
     width: 300px;
+  }
+  .menu-toggle {
+    padding: 4px;
+  }
+  .top-navbar ul li:nth-child(6),
+  .top-navbar ul li:nth-child(7) {
+    padding: 6px;
   }
 }
 @media only screen and (max-width: 383px) {
