@@ -392,6 +392,9 @@ a {
   background-image: url("../media-image/hero-banner-image.png");
   height: 100%;
   width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .hero-slider-card {
   display: flex;
@@ -703,9 +706,9 @@ footer hr {
 
 .background-video {
   position: absolute;
-  left: 50%;
+  left: 49%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-49%, -50%);
   max-width: auto;
   object-fit: cover;
   width: 100%;
@@ -845,7 +848,7 @@ footer hr {
 .product-videos .mySwiper .swiper-slide {
   width: 25%;
   height: 100%;
-  opacity: 0.4;
+  opacity: 0.7;
 }
 .product-videos .mySwiper .swiper-slide-thumb-active {
   opacity: 1;
@@ -2896,4 +2899,23 @@ line-height: 120%;
 }
 .navbar-toggler:focus {
   box-shadow: none;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 8px;
+}
+/* track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+/* thumb */
+::-webkit-scrollbar-thumb {
+  background: #1a4aff;
+}
+/* hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1a4aff;
 }

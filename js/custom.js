@@ -246,7 +246,7 @@ new Swiper(".hero-slider-main", {
 });
 
 // Product Video Slider
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".custom-yt-class", {
   slidesPerView: 4,
   freeMode: true,
   watchSlidesProgress: true,
@@ -254,7 +254,7 @@ var swiper = new Swiper(".mySwiper", {
   loopedSlides: 4,
 });
 
-var swiper2 = new Swiper(".mySwiper2", {
+var swiper2 = new Swiper(".custom-yt-class-main", {
   loop: true,
   loopedSlides: 4,
   autoplay: {
