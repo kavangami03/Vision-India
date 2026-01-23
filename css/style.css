@@ -1109,6 +1109,7 @@ footer hr {
   background-size: cover;
   background-position: center;
   min-height: 364px;
+  background-repeat: no-repeat;
 }
 .news-event-card-inner {
   padding: 20px;
