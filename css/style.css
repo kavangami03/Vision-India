@@ -379,6 +379,9 @@ a {
 .menu-close {
   display: none;
 }
+.menu-close img{
+  cursor: pointer;
+}
 .moblie-menu-only .contact-btn {
   display: none;
 }
@@ -2904,7 +2907,7 @@ line-height: 120%;
 
 /* width */
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 6px;
   height: 8px;
 }
 /* track */
